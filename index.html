@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банда ….::BROOKS&FAMILY::….</title>
+    <style>
+        /* Общий стиль */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Белый фон */
+            color: #333; /* Темный текст */
+            text-align: center;
+            overflow-x: hidden; /* Скрываем горизонтальный скроллинг */
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            border-bottom: 2px solid #555;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #00afff;
+        }
+        header h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #ffcc00;
+        }
+        .container {
+            padding: 20px;
+        }
+        .info {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .contact {
+            margin-top: 30px;
+            padding: 15px;
+            border: 2px solid #555;
+            display: inline-block;
+            font-size: 20px;
+        }
+        .image-container {
+            margin: 30px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #555;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 40px;
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            color: #fff;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        a {
+            color: #00afff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Анимация снежинок */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #00afff;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(100vh) translateX(calc(-50vw + 50vw * random));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Банда ….::BROOKS&FAMILY::….</h1>
+        <h2>Добро пожаловать в нашу семью!</h2>
+    </header>
+    <div class="container">
+        <div class="info">
+            <p>Мы самая крутая банда на Radmir RP. Наша цель - быть первыми и всегда оставаться на вершине.</p>
+            <p>Если ты готов присоединиться к нам, свяжись с нами по указанным контактам!</p>
+        </div>
+        <div class="image-container">
+            <img src="banda.jpg" alt="Банда ….::BROOKS&FAMILY::….">
+        </div>
+        <div class="contact">
+            <p><strong>Discord:</strong> e1emay</p>
+            <p><strong>Телефон в игре:</strong> 197-197</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Банда ….::BROOKS&FAMILY::…. Все права защищены.</p>
+    </footer>
+
+    <!-- Скрипт для снежинок -->
+    <script>
+        const createSnowflake = () => {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerText = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        };
+
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
